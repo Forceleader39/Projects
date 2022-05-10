@@ -3,20 +3,20 @@
 #include<iostream>
 using namespace std;
 int main()
-{int n,P,i;
+{int n,P,i; // n is the number you want
 cout<<"Type a number\n";
 cin>>n;
-P=1;
-for(i=2;i<=n;)
-{ if(n%i==0)
+P=1;           //the variable P is used to check if indeed all the numbers add up to n
+for(i=2;i<=n;) //we start with 2 because you don't want to divide by 1
+{ if(n%i==0)   //check if the number is dividable by i
 {
-   cout<<i<<" * ";
-   P=P*i;
-   n=n/i;
+   cout<<i<<" * ";  // if it is dividable by i then that number(i) will se written in the console
+   P=P*i;            
+   n=n/i;          //we divide by i to continue the prime factorization
 }
 else 
 {
-	i++;
+	i++;       //if it isn't dividable by i then i will be increased until n can be divided again
 }
 }
 cout<<"1 = "<<P<<endl;
