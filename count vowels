@@ -1,0 +1,17 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{string word;
+int i, total;
+total= 0;
+cin>>word; //type the word
+cout<<"Vowels are: ";          // i is 0 because we want to start from the first letter all the way to the last letter
+for(i=0;i<=word.length();i++) // that is why we are using a for loop that is the lenght of the word
+{if(word[i] == 'e' || word[i] == 'a' || word[i] == 'i' || word[i] == 'o' || word[i] == 'u') //checking if the letter is a vowel
+   {cout<<word[i]<<", ";  // if it is a vowel then it will be written in the console
+    total+=1;}      // summation of the number of vowels
+}
+cout<<endl<<"total number of vowels are "<<total<<endl;
+system("pause");
+return 0;}
